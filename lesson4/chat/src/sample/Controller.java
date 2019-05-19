@@ -5,6 +5,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javax.swing.text.html.ImageView;
 import java.awt.*;
+import java.net.URL;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+
 public class Controller {
 
 //    @FXML
@@ -12,7 +16,6 @@ public class Controller {
 //
 //    @FXML
 //   private ImageView imageview;
-
 
     @FXML
     TextArea textArea;
@@ -27,7 +30,18 @@ public class Controller {
 //        Stage stage = (Stage) closeButton.getScene().getWindow();
 //        stage.close();
 //    }
+public class WebViewController
+{
+    @FXML
+    private WebView webView;
 
+    @FXML
+    private void initialize()
+    {
+        WebEngine engine = webView.getEngine();
+        engine.load("H:\\Games\\Steam\\steamapps\\workshop\\content\\431960\\1276104287\\index.html");
+    }
+}
     public void sendMsg() {
         textArea.appendText(textField.getText() + "\n");
         textField.clear();
