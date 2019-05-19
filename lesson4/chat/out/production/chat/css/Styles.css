@@ -1,6 +1,6 @@
 .root {
     -fx-base: black;
-    -fx-background-image: url(sample/img/hd.png)
+    -fx-background: -fx-base;
     -fx-control-inner-background: -fx-base;
     -fx-control-inner-background-alt: -fx-base;
     -fx-faint-focus-color: -fx-accent;
@@ -18,10 +18,6 @@
     );
     -fx-selection-bar-non-focused: derive(-fx-hover-base, -80%);
     -fx-contrast-color: white;
-}
-.text,
-.text-input {
-    -fx-font-weight: bold;
 }
 .axis {
     -fx-tick-label-font-weight: bold;

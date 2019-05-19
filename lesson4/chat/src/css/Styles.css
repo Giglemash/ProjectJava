@@ -19,10 +19,6 @@
     -fx-selection-bar-non-focused: derive(-fx-hover-base, -80%);
     -fx-contrast-color: white;
 }
-.text,
-.text-input {
-    -fx-font-weight: bold;
-}
 .axis {
     -fx-tick-label-font-weight: bold;
 }

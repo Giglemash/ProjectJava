@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import javax.swing.text.html.ImageView;
+import java.awt.*;
 
 
 public class Main extends Application {
@@ -16,13 +18,23 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Detective Pikachu Chat");
         primaryStage.setScene(new Scene(root, 700, 600));
-//        Scene scene = new Scene(root);
-//        primaryStage.setScene(scene);
-//        scene.getStylesheets().add("yellowOnBlack.css");
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 
+
+
+//    @Override
+//    public void start(Stage primaryStage) {
+//        TextArea textArea = new TextArea();
+//        textArea.getStyleClass().add("framed");
+//
+//        Scene scene = new Scene(new StackPane(textArea));
+//        scene.getStylesheets().add("Styles.css");
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
+//    }
+//
 
     public static void main(String[] args) {
         launch(args);
