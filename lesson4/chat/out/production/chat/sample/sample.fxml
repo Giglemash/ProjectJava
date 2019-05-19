@@ -6,56 +6,32 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?scenebuilder-stylesheet /css/Styles.css?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-   <children>
-      <AnchorPane prefHeight="600.0" prefWidth="700.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-          <stylesheets><URL value="@/css/Styles.css" /></stylesheets>
-         <children>
-            <VBox layoutX="9.0" layoutY="73.0" prefHeight="550.0" prefWidth="660.0">
-               <children>
-                  <TextArea fx:id="textArea" editable="false" prefHeight="485.0" prefWidth="688.0" VBox.vgrow="ALWAYS" />
-                  <HBox prefHeight="0.0" prefWidth="688.0">
-                     <children>
-                        <TextField fx:id="textField" minHeight="-Infinity" onAction="#sendMsg" prefHeight="50.0" prefWidth="670.0" promptText="Введите сообщение.." HBox.hgrow="ALWAYS" />
-                        <Button fx:id="btn1" mnemonicParsing="false" onAction="#sendMsg" styleClass="btn1">
-                           <graphic>
-                              <ImageView fitHeight="41.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../img/pokemon_PNG27.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <Button layoutX="603.0" layoutY="14.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="57.0">
-               <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../img/pixel_pikachu_by_24kazzu24d50tuly.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-         </children>
-      </AnchorPane>
-   </children>
-</GridPane>
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+   <stylesheets><URL value="@/css/Styles.css" /></stylesheets>
+<!--   <Button fx:id="closeButton" cancelButton="true" layoutX="350.0" layoutY="767.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefWidth="100.0" text="Close" />-->
+<!--      <graphic>-->
+<!--         <ImageView fitHeight="44.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">-->
+<!--            <image>-->
+<!--               <Image url="@img/pixel_pikachu_by_24kazzu24d50tuly.png" />-->
+<!--            </image>-->
+<!--         </ImageView>-->
+<!--      </graphic>-->
+<!--   </Button>-->
+   <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS" />
+   <HBox>
+      <TextField fx:id="textField" onAction="#sendMsg" promptText="Введите сообщение.." HBox.hgrow="ALWAYS" />
+      <Button fx:id="button1" onAction="#sendMsg" prefHeight="0.0" prefWidth="71.0" styleClass="btn1">
+         <graphic>
+            <ImageView fitHeight="54.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/pokemon_PNG27.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </HBox>
+</VBox>

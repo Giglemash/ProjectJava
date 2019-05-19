@@ -7,14 +7,19 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+
+
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Detective Pikachu Chat");
         primaryStage.setScene(new Scene(root, 700, 600));
-       // primaryStage.initStyle(StageStyle.UNDECORATED);
+//        Scene scene = new Scene(root);
+//        primaryStage.setScene(scene);
+//        scene.getStylesheets().add("yellowOnBlack.css");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 
@@ -23,3 +28,9 @@ public class Main extends Application {
         launch(args);
     }
 }
+//    public void onExit(ActionEvent actionEvent) {
+//        Stage stage = (Stage) ExitButton.getScene().getWindow();
+//        stage.close();
+//    }
+//}
+
