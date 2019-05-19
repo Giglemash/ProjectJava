@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+	
+   <head>
+	
+	<title>Teso</title>
+	<style type="text/css">
+		html {
+			background-color: #FFFAFA;
+		}
+		html, body {
+			margin: 0px;
+			overflow: hidden;
+			height: 100%;
+		}
+	</style>
+<script>
+	window.addEventListener('load', _ => {
+
+ 	 let audio = []
+
+
+
+	 const bar = {
+
+	 width: window.innerWidth / 128 - 8,
+		
+	 height: 100,
+
+	 padding: 8
+
+	}
+
+	 const canvas = document.createElement('canvas')
+	
+	 const context = canvas.getContext('2d')
+
+	
+	 canvas.width = window.innerWidth
+	 canvas.height = window.innerHeight
+
+ 	 document.body.appendChild(canvas)
+
+	const listener = arr => {
+
+	audio = arr
+	
+	}
+
+	const draw = _ => {
+	context.fillstyle = '#fff'
+	context.clearRect(0, 0, window.innerWidth, window.innerHeight)
+
+	
+	for (const [i, part] of audio.entries()) {
+ 	
+	const x = (i * bar.width) + ((i + 1) * bar.padding) - (bar.padding / 2)
+
+	const y = 4
+
+	context.fillRect(x, y, bar.width, bar.height * part)
+
+	}
+
+
+	requestAnimationFrame(draw)
+     }
+	
+	 window.wallpaperRegisterAudioListener(listener)
+
+	 draw()
+   })
+				
+     </script>	
+	 <script type="text/javascript" src = "main.js"></script>
+   </head> 
+
+ <body>
+
+ <div> 
+  <img src='slide_1.gif' id="image_1" style="position: absolute; width: 100%; height: 100%;" />
+  <img src='slide_2.gif' id="image_2" style="opacity: 0; filter: alpha(opacity=0); position: absolute;width: 100%; height: 100%;" />
+  <img src='slide_3.gif' id="image_3" style="opacity: 0; filter: alpha(opacity=0); position: absolute;width: 100%; height: 100%;" />
+  <img src='slide_4.gif' id="image_4" style="opacity: 0; filter: alpha(opacity=0); position: absolute;width: 100%; height: 100%;" />
+  <img src='slide_5.gif' id="image_5" style="opacity: 0; filter: alpha(opacity=0); position: absolute;width: 100%; height: 100%;" />
+  <img src='slide_6.gif' id="image_4" style="opacity: 0; filter: alpha(opacity=0); position: absolute;width: 100%; height: 100%;" />
+</div>
+
+ </body>
+
+</html>
