@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.Vector;
 
+
 public class MainServer {
 
     private Vector<ClientHandler> clients;
