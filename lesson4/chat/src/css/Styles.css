@@ -1,0 +1,61 @@
+.root {
+    -fx-base: black;
+    -fx-background: -fx-base;
+    -fx-control-inner-background: -fx-base;
+    -fx-control-inner-background-alt: -fx-base;
+    -fx-faint-focus-color: -fx-accent;
+    -fx-hover-base: yellow;
+    -fx-pressed-base: derive(-fx-hover-base, -18%);
+    -fx-box-border: -fx-hover-base;
+    -fx-text-box-border: -fx-hover-base;
+    -fx-shadow-highlight-color: -fx-base;
+    -fx-outer-border: -fx-hover-base;
+    -fx-light-text-color: -fx-hover-base;
+    -fx-mark-color: ladder(
+        -fx-color,
+        yellow 30%,
+        derive(-fx-color,-63%) 31%
+    );
+    -fx-selection-bar-non-focused: derive(-fx-hover-base, -80%);
+    -fx-contrast-color: white;
+}
+.axis {
+    -fx-tick-label-font-weight: bold;
+}
+.slider .thumb {
+    -fx-background-color: -fx-hover-base, -fx-hover-base, -fx-body-color;
+}
+.slider:focused .thumb {
+    -fx-background-color: -fx-focus-color, -fx-hover-base, -fx-body-color, -fx-faint-focus-color, -fx-body-color;
+}
+.scroll-bar > .increment-button,
+.scroll-bar > .decrement-button {
+    -fx-background-color: -fx-outer-border, -fx-base, -fx-base;
+}
+.scroll-bar > .increment-button:hover,
+.scroll-bar > .decrement-button:hover {
+    -fx-background-color: -fx-outer-border, -fx-hover-base, -fx-hover-base;
+}
+.scroll-bar > .increment-button:hover > .increment-arrow,
+.scroll-bar > .decrement-button:hover > .decrement-arrow,
+.scroll-bar > .increment-button:hover:pressed > .increment-arrow,
+.scroll-bar > .decrement-button:hover:pressed > .decrement-arrow {
+    -fx-background-color: -fx-base, -fx-base;
+}
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: -fx-hover-base, -fx-hover-base;
+}
+.scroll-bar > .increment-button:hover:pressed,
+.scroll-bar > .decrement-button:hover:pressed {
+    -fx-background-color: -fx-outer-border, -fx-pressed-base, -fx-pressed-base;
+}
+.scroll-bar:horizontal > .decrement-button > .decrement-arrow,
+.scroll-bar:horizontal > .increment-button > .increment-arrow,
+.scroll-bar:vertical > .decrement-button > .decrement-arrow,
+.scroll-bar:vertical > .increment-button > .increment-arrow {
+    -fx-effect: null;
+}
+.scroll-bar > .thumb:pressed {
+    -fx-background-color: -fx-outer-border, -fx-pressed-base, -fx-pressed-base;
+}
