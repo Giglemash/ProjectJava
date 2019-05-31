@@ -13,9 +13,9 @@
         <PasswordField fx:id="passField" onAction="#sendAuthMsg" promptText="Пароль" />
         <Button onAction="#sendAuthMsg" text="Авторизоваться" />
     </HBox>
-    <TextArea fx:id="textArea" editable="false" styleClass="background" stylesheets="@blackOnWhite.css" VBox.vgrow="ALWAYS" />
+    <TextArea fx:id="textArea" editable="false" stylesheets="@blackOnWhite.css" VBox.vgrow="ALWAYS" />
     <HBox fx:id="msgPanel" stylesheets="@blackOnWhite.css">
-        <TextField fx:id="msgField" onAction="#sendMsg" promptText="Написать сообщение" styleClass="background" stylesheets="@blackOnWhite.css" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="msgField" onAction="#sendMsg" promptText="Написать сообщение" stylesheets="@blackOnWhite.css" HBox.hgrow="ALWAYS" />
         <Button onAction="#sendMsg" stylesheets="@blackOnWhite.css" text="Отправить" />
     </HBox>
 </VBox>
